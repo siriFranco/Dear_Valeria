@@ -68,7 +68,6 @@ body {
     font-family: 'Comic Sans MS', 'Segoe Print', 'Segoe UI', sans-serif;
     font-size: 15px !important; /* 🔽 aún más pequeño */
     color: #877f4a;
-    text-shadow: 1px 1px 3px black;
     z-index: 2;
     white-space: pre-line;
   }
@@ -86,7 +85,6 @@ body {
     font-family: 'Comic Sans MS', 'Segoe Print', 'Segoe UI', sans-serif;
     font-size: 15px !important;
     color: #877f4a;
-    text-shadow: 1px 1px 3px black;
     cursor: pointer;
   }
 
