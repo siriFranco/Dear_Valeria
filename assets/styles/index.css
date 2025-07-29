@@ -1,0 +1,178 @@
+/* Elimina márgenes del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fondo centrado, cubriendo toda la pantalla */
+body {
+  background-image: url("../img/Mario_house.png");
+  background-size: 100% auto;     /* ← Ajusta al ancho de la pantalla */
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+
+.mailbox-container {
+  position: relative;
+  height: 100vh;  /* ← Agregado */
+  width: 100vw;   /* ← Agregado */
+}
+
+/* Contenedor animado que mueve desde abajo */
+.mailbox-body {
+  position: absolute;
+  top: 74vh;
+  left: 66.1vw;
+  transform: translate(-50%, -50%);
+  transform-origin: bottom center; /* ⚠️ Esto hace que se agite desde la base */
+}
+
+/* Imagen del buzón */
+.mailbox {
+  width: 7.5vw;
+/*   max-width: 120px;
+  min-width: 60px; */
+  cursor: pointer;
+  display: block;
+}
+
+.mailbox-body:hover {
+  animation: bottomShake 0.5s ease-in-out infinite;
+}
+
+@media (max-width: 900px) {
+  body {
+    background-size: 100% auto;
+    background-position: top center;
+    background-attachment: scroll;
+  }
+
+  .dialogue {
+    width: 80vw;
+    top: 10vw;
+  }
+
+  .dialogue-text {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65vw;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 15px !important; /* 🔽 aún más pequeño */
+    color: #877f4a;
+    text-shadow: 1px 1px 3px black;
+    z-index: 2;
+    white-space: pre-line;
+  }
+
+  .dialogue-menu {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 3;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 15px !important;
+    color: #877f4a;
+    text-shadow: 1px 1px 3px black;
+    cursor: pointer;
+  }
+
+  .mailbox {
+    width: 6vw;
+  }
+
+  .mailbox-body {
+    top: 36vw;
+    left: 66vw;
+  }
+
+
+}
+
+
+
+
+
+
+/* Keyframes que hacen que solo la base se agite */
+@keyframes bottomShake {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  25% { transform: translate(-50%, -50%) rotate(2deg); }
+  50% { transform: translate(-50%, -50%) rotate(-2deg); }
+  75% { transform: translate(-50%, -50%) rotate(1deg); }
+  100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+/* Imagen del diálogo */
+.dialogue {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 70vw;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 1; /* Imagen por detrás del texto */
+}
+
+/* Texto encima de la imagen de diálogo */
+.dialogue-text {
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65vw;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 1.7rem;
+  color: #877f4a;
+  text-shadow: 1px 1px 3px black;
+  z-index: 2; /* ⬅️ mayor que .dialogue para estar encima */
+  white-space: pre-line;
+}
+
+
+.dialogue-menu {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 3;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 1.7rem;
+  color: #877f4a;
+  text-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+
+.dialogue-menu div {
+  transition: transform 0.2s;
+}
+
+.dialogue-menu div:hover {
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+/* Oculta inicialmente */
+.hidden {
+  display: none;
+}
+
+
