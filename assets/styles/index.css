@@ -65,7 +65,7 @@ body {
     transform: translateX(-50%);
     width: 65vw;
     text-align: center;
-    font-family: 'Comic Sans MS', cursive;
+    font-family: 'Comic Sans MS', 'Segoe Print', 'Segoe UI', sans-serif;
     font-size: 15px !important; /* 🔽 aún más pequeño */
     color: #877f4a;
     text-shadow: 1px 1px 3px black;
@@ -83,7 +83,7 @@ body {
     gap: 10px;
     z-index: 3;
     text-align: center;
-    font-family: 'Comic Sans MS', cursive;
+    font-family: 'Comic Sans MS', 'Segoe Print', 'Segoe UI', sans-serif;
     font-size: 15px !important;
     color: #877f4a;
     text-shadow: 1px 1px 3px black;
